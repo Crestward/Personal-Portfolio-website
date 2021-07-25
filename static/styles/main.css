@@ -1,6 +1,8 @@
 body{
     background-color: #E5E5E5;
-    justify-content: center;
+    margin: 0;
+    height: 100%;
+    position: relative;
 }
 
 .section--1{
@@ -178,5 +180,9 @@ body{
     display: flex;
 }
 
+html{
+    height: 100%;
+    position: relative;
+}
 
 
