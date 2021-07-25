@@ -1,8 +1,8 @@
-body{
+html body{
     background-color: #fff;
-    margin: 0;
-    height: 100%;
-    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: auto !important;
 }
 
 .section--1{
@@ -10,7 +10,6 @@ body{
     padding-top: 2em;
     padding-bottom: 2em;
 }
-
 
 .section--2{
     background-color: #E5E5E5;
@@ -32,10 +31,8 @@ body{
 
 .hero{
     background-color: #1F2428;
-    width: 100vw;
-    height: 100vh;
+    min-height: 70vh;
     color: #fff;
-    background-size: 100%;
 
 }
 
@@ -47,13 +44,13 @@ body{
 }
 
 .hero--content{
-    width: 100vw;
+    width: 800px;
     margin: 0 auto;
     padding: 3em;
 }
 
 .hero--content--intro{
-    display: block;
+    display: flex;
     color: #fff;
     justify-content: center;
     align-items: center;
@@ -61,13 +58,12 @@ body{
     margin-bottom: 3em;
 }
 
-.hero h1{
-    font-size: 64px;
-    margin: 0 0 10px 0;
+.intro--name{
+    font-size: 80px;
+    letter-spacing: .1em;
     font-weight: 700;
     line-height: .9em;
     text-align: center;
-    
 }
 
 .description{
@@ -173,6 +169,57 @@ body{
     margin: 0 auto;
 }
 
+@media (max-width:900px){
+    .hero--content--intro{
+        flex-direction: column;
+    }
+
+    .projects--wrapper{
+
+        grid-template-columns: 1fr ;
+
+        
+    }
+}
+
+@media (max-width:800px){
+    .hero--content{
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width:600px){
+    
+    .skills--container{
+        width: 100%;
+    }
+
+   
+}
+
+
+@media (max-width:400px){
+
+
+    .skill--wrapper{
+        flex-flow: column;
+        
+    }
+}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
 
 #btc{
     background-color: #C4E7F2;
@@ -181,16 +228,5 @@ body{
     display: flex;
 }
 
-html{
-    height: 100%;
-    position: relative;
-    touch-action: pan-x pan-y;
-}
 
 
-@media only screen and (min-device-width: 480px) {
-    section{
-        height: 100vh;
-        width: 100vw;
-    }
-}
