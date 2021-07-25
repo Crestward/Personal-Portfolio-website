@@ -1,0 +1,139 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="hero">
+    <div class="hero--content">
+        <div class="hero--content--intro">
+            <img id="profile_pic" src="{% static 'images/image.jpeg' %}">
+            <h1 class="intro--name">Oladimeji <br> Adeyemi </h1>
+        </div>
+
+        <div class="hero--content--subheadline">
+
+            <h3 class="description">Django Developer and Data Engineer</h3>
+            <p class="slogan">I build fun stuff and play with data</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="container section--2">
+
+    <h3>My Projects</h3>
+    <h5>Projects that has made my programming journey fun </h5>
+    <div class="projects--wrapper">
+
+        {% for project in projects %}
+        <div class="project--column">
+            <a href="{% url 'project' project.id %}">
+                <img class="project--thumbnail" src="{{project.thumbnail.url}}">
+            </a>
+            <div class="project--body">
+                <h5>{{project.title}}</h5>
+            </div>
+        </div>
+        {% empty %}
+
+        <h3>There are no projects in the database...</h3 {% endfor %} </div>
+
+
+        <div class="about--wrapper">
+            <h3>About Me</h3>
+
+            <p> 
+                I am a simple man interested in the inner working of anything i see. Thus, it comes as no wonder that i am deeply involved in the backend of both the web development and
+                 data analytics fields. You can consider me the friendly coding plumber, here to make sure everything works as expected behind the scenes with no glitches. Whether i am building data pipelines or creating complex Django models, i am right in my element.
+            </p>
+             <p> 
+                 I am a Economics graduate of the University of Ibadan, where i groomed an interest in the effects of data on our everyday. Thereafter, i became a self-taught programmer thanks to bootcamps and several accreditated online courses. Now, i am
+                 a experienced developer with more than 2 years of experience with extensive use of Agile methodologies in my work. 
+             </p>
+        </div>
+
+</section>
+
+<section class="section--1">
+    <div class="skills--container">
+        <h3>Skills</h3>
+
+        {% for skill in detailedSkills %}
+        <div class="skill--wrapper">
+            {% if skill.logo %}
+            <img class="skill--logo" src="{{skill.logo.url}}">
+            {% endif %}
+            <div>
+                <h5>{{skill.title}}</h5>
+                <p>{{skill.body}}</p>
+            </div>
+
+        </div>
+        {% endfor %}
+
+
+        <h4>Other Skills</h4>
+        <div class="other--skills--wrapper">
+            {% for skill in skills %}
+            <div class="skill--tag">
+                <span>{{skill.title}}</span>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+</section>
+
+<!--
+<section class="section--2">
+    <div class="skills--container">
+        <h3>Endorsements</h3>
+        <a class="btn btn-primary my-3" href="{% url 'add-endorsement' %}">Add Endorsement</a>
+
+        {% for i in endorsements %}
+        <div style="margin-bottom: 1em;" class="card">
+            <div class="card-body">
+                <h5>{{i.name}}</h5>
+                <p>{{i.body}}</p>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+-->
+<section class="container section--2">
+    <div class="about--wrapper">
+        <h3>Resume</h3>
+                <p> 
+                   Feel free to take a peek at my resume below
+                </p>
+        <a class="btn btn-primary my-3" href="static\images\media\Oladimeji-Adeyemi_resume.pdf"> 
+                Download Resume </a>
+    </div>
+</section>
+
+<section class="section--1">
+    <div class="container">
+        <p class="slogan">Fill the form below if you wish to get in contact with me:</p>
+        <form class="contact--form" method="POST">
+            {% csrf_token %}
+
+            {% for field in form %}
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">{{field.label}}</label>
+                {{field}}
+            </div>
+
+            {% endfor %}
+
+            <input class="btn btn-primary" type="submit" value="submit">
+        </form>
+    </div>
+</section>
+
+{% endblock content %}
