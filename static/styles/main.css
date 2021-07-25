@@ -59,10 +59,11 @@ body{
 }
 
 .intro--name{
-    font-size: 75px;
-    letter-spacing: .1em;
+    font-size: 64px;
+    margin: 0 0 10px 0;
     font-weight: 700;
     line-height: .9em;
+    text-align: center;
     
 }
 
