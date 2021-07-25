@@ -170,67 +170,6 @@ body{
     margin: 0 auto;
 }
 
-@media (max-width: 480px) {
-    .hero{
-        background-size: cover;
-    }
-    .hero h1{
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero{
-        background-size: cover;
-    }
-    .hero h1{
-        font-size: 28px;
-        line-height: 36px;
-    }
-}
-
-@media (max-width:900px){
-    .hero--content--intro{
-        flex-direction: column;
-    }
-
-    .projects--wrapper{
-
-        grid-template-columns: 1fr ;
-
-        
-    }
-}
-
-@media (max-width:800px){
-    .hero--content{
-        width: 100%;
-    }
-}
-
-
-
-
-@media (max-width:600px){
-    
-    .skills--container{
-        width: 100%;
-    }
-
-   
-}
-
-
-@media (max-width:400px){
-
-
-    .skill--wrapper{
-        flex-flow: column;
-        
-    }
-}
 
 #btc{
     background-color: #C4E7F2;
