@@ -5,6 +5,7 @@ html body{
     height: auto !important;
 }
 
+
 .section--1{
     background-color: #fff;
     padding-top: 2em;
@@ -12,7 +13,7 @@ html body{
 }
 
 .section--2{
-    background-color: #E5E5E5;
+    background-color: #fff;
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -202,11 +203,19 @@ html body{
 
 
 @media (max-width:400px){
-    body{
-    max-width: 100%;
-    overflow-x: hidden;
-    height: auto !important;
-}
+   .hero--content--intro{
+       justify-content: center;
+   }
+
+   .intro--name{
+       font-size: 60px;
+   }
+   .hero--content--subheadline h3{
+       font-size: 45;
+   }
+   .hero--content--subheadline p{
+       font-size: 25px;
+   }
     .skill--wrapper{
         flex-flow: column;
         
