@@ -202,24 +202,16 @@ html body{
 
 
 @media (max-width:400px){
-
-
+    body{
+    max-width: 100%;
+    overflow-x: hidden;
+    height: auto !important;
+}
     .skill--wrapper{
         flex-flow: column;
         
     }
 }
-
-@viewport {
-    width: device-width ;
-    zoom: 1.0 ;
-}
-
-@viewport {
-    width: device-width ;
-    zoom: 1.0 ;
-}
-
 
 #btc{
     background-color: #C4E7F2;
