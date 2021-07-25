@@ -1,5 +1,5 @@
 body{
-    background-color: #E5E5E5;
+    background-color: #fff;
     margin: 0;
     height: 100%;
     position: relative;
@@ -31,7 +31,7 @@ body{
 
 .hero{
     background-color: #1F2428;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     color: #fff;
     background-size: 100%;
@@ -46,13 +46,13 @@ body{
 }
 
 .hero--content{
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
     padding: 3em;
 }
 
 .hero--content--intro{
-    display: flex;
+    display: block;
     color: #fff;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ body{
     margin-bottom: 3em;
 }
 
-.intro--name{
+.hero h1{
     font-size: 64px;
     margin: 0 0 10px 0;
     font-weight: 700;
