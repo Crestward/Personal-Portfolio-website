@@ -166,6 +166,27 @@ body{
     margin: 0 auto;
 }
 
+@media (max-width: 480px) {
+    .hero{
+        background-size: cover;
+    }
+    .hero h1{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero{
+        background-size: cover;
+    }
+    .hero h1{
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
 @media (max-width:900px){
     .hero--content--intro{
         flex-direction: column;
